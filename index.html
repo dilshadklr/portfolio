@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilshad Portfolio</title>
+
+  <!--  Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /*  GLOBAL STYLE */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f5ec;
+      color: #2d2d2d;
+      overflow-x: hidden;
+    }
+
+    /*  NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #355e3b;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeSlideDown 1s ease-out;
+    }
+
+    .navbar.scrolled {
+      background: linear-gradient(90deg, #355e3b, #2d4f33);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    @keyframes fadeSlideDown {
+      from { transform: translateY(-70px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #ffffff !important;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .nav-icon {
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    .nav-icon:hover {
+      color: #b9ff9a;
+      transform: scale(1.15);
+    }
+
+    .profile-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid #4caf50;
+      margin-left: 25px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(76,175,80,0.6);
+    }
+
+    /*  BANNER */
+    .banner {
+  background: linear-gradient(135deg, #ffffff, #e9f3e4);
+  text-align: center;
+  padding: 180px 20px 160px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #4d4d4d;
+  margin-top: 15px;
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  margin-top: 35px;
+  transition: all 0.4s ease;
+}
+
+.btn-green:hover {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    /*  ABOUT */
+    .about-section {
+      padding: 80px 40px;
+      background: #f4f9f3;
+      text-align: center;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .about-section h2 {
+      color: #2e7d32;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      color: #333;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .about-link {
+      color: #2e7d32;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .about-link:hover {
+      color: #4caf50;
+      text-decoration: underline;
+    }
+
+    /*  CERTIFICATES */
+  .dashboard-container {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f9fbe7, #e8f5e9);
+  border-radius: 25px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.project-card {
+  background: linear-gradient(160deg, #ffffff, #f1f8ee);
+  border: 1px solid rgba(46,125,50,0.2);
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #4caf50;
+}
+
+.project-card img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(46,125,50,0.15);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 18px 15px;
+  text-align: center;
+}
+
+.card-title {
+  color: #2e7d32;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #4d4d4d;
+  min-height: 40px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌿 CONTACT */
+.contact-section {
+  background: #e9f3e4;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.contact-section h2 {
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.contact-subtext {
+  color: #4d4d4d;
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.15);
+  transition: all 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+}
+
+.contact-icons i {
+  font-size: 2rem;
+  color: #2e7d32;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover i {
+  color: #4caf50;
+}
+
+/* 🌿 FOOTER (for continuity) */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #2e7d32;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(46,125,50,0.1);
+  background-color: #f4f9f3;
+}
+
+/* 🌿 ANIMATION */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+
+<body>
+  <!--  NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">PORTFOLIO</a>
+      <div class="d-flex align-items-center ms-auto">
+        <a href="#Certificate" class="nav-icon" title="Certificate">
+  <i class="bi bi-patch-check-fill" style="font-size: 1.5rem;"></i>
+</a>
+
+        <a href="#contact" class="nav-icon"><i class="bi bi-telephone-fill"></i></a>
+        <a href="profile.html">
+          <img src="433.jpg" alt="Profile" class="profile-img">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!--  BANNER -->
+  <section class="banner">
+    <h1>Hi, I'm Mohammed Dilshad </h1>
+    <p>
+      A passionate <strong>Python Full Stack Developer</strong> building modern web experiences with <br>
+      HTML, CSS, Bootstrap, Django, and MongoDB.
+    </p>
+    <a href="projects.html" class="btn btn-green">Explore My Work</a>
+  </section>
+
+  <!--  ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm <strong>Mohammed Dilshad</strong> — a <strong>Full Stack Python Developer</strong>. 
+        I create websites and web applications that are fast, user-friendly, and reliable.I enjoy building both
+        the front-end and back-end of web projects, turning ideas into working solutions.</p>
+      <p>
+        I'm always learning new technologies and improving my skills and deliver better results. You can check out some of my work 
+        in the <strong>Projects</strong> section.
+        i'am open to new job opertunities where i can learn,grow,and contribute. if you think I'd be a good fit for your team, feel free to 
+       <a href="#contact" class="about-link">contact me</a>!
+      </p>
+    </div>
+  </section>
+
+  <!--  CERTIFICATES -->
+ <section id="Certificate" class="dashboard-container container mt-5">
+  <h2 class="dashboard-title"> My Certificates</h2>
+  <div class="row g-4 justify-content-center">
+
+    <!-- Python Full Stack -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal1">
+        <img src="https://i.imgur.com/y6LpVyr.jpg" alt="Python Certificate" class="img-fluid rounded">
+        <div class="card-body">
+          <h5 class="card-title">Python Full Stack</h5>
+          <p class="card-text">Issued by Udemy — Full Stack Development with Django.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal2">
+        <img src="https://i.imgur.com/HP8xS4t.jpg" alt="Web Development Certificate" class="img-fluid rounded">
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <p class="card-text">Responsive web design & modern UI/UX.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI & Machine Learning -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal3">
+        <img src="https://i.imgur.com/kzKlhlD.jpg" alt="AI Certificate" class="img-fluid rounded">
+        <div class="card-body">
+          <h5 class="card-title">AI & Machine Learning</h5>
+          <p class="card-text">AI fundamentals using Python (Coursera).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cybersecurity Essentials -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal4">
+        <img src="AI FOR DILSHAD.png" alt="Cybersecurity Certificate" class="img-fluid rounded">
+        <div class="card-body">
+          <h5 class="card-title">Cybersecurity Essentials</h5>
+          <p class="card-text">Issued by Cisco Networking Academy.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 💥 Certificate Modals -->
+<div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 text-center">
+        <img src="https://i.imgur.com/y6LpVyr.jpg" alt="Python Certificate" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 text-center">
+        <img src="https://i.imgur.com/HP8xS4t.jpg" alt="Web Development Certificate" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 text-center">
+        <img src="https://i.imgur.com/kzKlhlD.jpg" alt="AI Certificate" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 text-center">
+        <img src="AI FOR DILSHAD.png" alt="Cybersecurity Certificate" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<!-- 🌿 CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2>Let's Connect </h2>
+    <p class="contact-subtext">
+      I'd love to connect with you — whether it's about collaboration, projects, or just a friendly chat!
+    </p>
+    <div class="contact-icons mt-4">
+      <a href="https://wa.me/919496791288?text=Hello! %20Mohammed%20Dilshad" target="_blank" title="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/dilleeyy" target="_blank" title="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mohammed-dilshad-2643b02b3" target="_blank" title="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      
+
+    
+    </div><br>
+    <p class="contact-subtext text-muted small mb-0">dilshadklr04@gmail.com</p>
+
+  </div>
+</section>
+
+
+
+  <!--  FOOTER -->
+  <footer>
+    © 2025 Mohammed Dilshad | Designed using HTML & Bootstrap
+  </footer>
+
+  <!--  Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--  Navbar Scroll Effect -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
