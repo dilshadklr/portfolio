@@ -14,7 +14,7 @@
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background-color: #f9f5ec;
+      background-color: #ece5e5;
       color: #2d2d2d;
       overflow-x: hidden;
     }
@@ -25,15 +25,15 @@
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: #355e3b;
+      background: #4a0816;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      transition: background 0.4s ease, box-shadow 0.4s ease;
+    
       animation: fadeSlideDown 1s ease-out;
     }
 
     .navbar.scrolled {
-      background: linear-gradient(90deg, #355e3b, #2d4f33);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background: linear-gradient(90deg, #4a0816, #4a0816);
+      box-shadow: 0 4px 15px rgba(120, 90, 90, 0.15);
     }
 
     @keyframes fadeSlideDown {
@@ -56,7 +56,7 @@
     }
 
     .nav-icon:hover {
-      color: #b9ff9a;
+      color: #370610;;
       transform: scale(1.15);
     }
 
@@ -64,7 +64,7 @@
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      border: 2px solid #4caf50;
+      border: 2px solid #890320;;
       margin-left: 25px;
       object-fit: cover;
       transition: 0.3s;
@@ -72,12 +72,12 @@
 
     .profile-img:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 10px rgba(76,175,80,0.6);
+      box-shadow: 0 0 10px #4a0816;
     }
 
     /*  BANNER */
     .banner {
-  background: linear-gradient(135deg, #ffffff, #e9f3e4);
+  background: linear-gradient(135deg, #ffffff, #f3e4e4c8);
   text-align: center;
   padding: 180px 20px 160px;
   opacity: 0;
@@ -87,7 +87,7 @@
 .banner h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #2e7d32;
+  color: #4a0816;
   margin-bottom: 20px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .btn-green {
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  background: linear-gradient(135deg, #600317, #4a0816);
   color: #ffffff;
   font-weight: 600;
   border: none;
@@ -109,12 +109,12 @@
 }
 
 .btn-green:hover {
-  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  background: linear-gradient(135deg, #4a0816, #6c0219);
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3);
+  box-shadow: 0 8px 15px rgba(226, 226, 226, 0.571);
 }
 
-/* ✅ Fade-in animation */
+/*  Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -129,19 +129,19 @@
     /*  ABOUT */
     .about-section {
       padding: 80px 40px;
-      background: #f4f9f3;
+      background: #f9f3f3;
       text-align: center;
       animation: fadeInUp 1.5s ease forwards;
     }
 
     .about-section h2 {
-      color: #2e7d32;
+      color: #4a0816;
       font-weight: 700;
       margin-bottom: 20px;
     }
 
     .about-section p {
-      color: #333;
+      color: #000000;
       line-height: 1.8;
       font-size: 1.1rem;
       max-width: 700px;
@@ -149,27 +149,27 @@
     }
 
     .about-link {
-      color: #2e7d32;
+      color: #4a0816;
       font-weight: 600;
       text-decoration: none;
     }
 
     .about-link:hover {
-      color: #4caf50;
+      color: #4a0816;
       text-decoration: underline;
     }
 
     /*  CERTIFICATES */
   .dashboard-container {
   padding: 80px 40px;
-  background: linear-gradient(135deg, #f9fbe7, #e8f5e9);
-  border-radius: 25px;
+  background: (135deg, #f5e9ea, #9b8a8a40);
+  border-radius: 5px;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .dashboard-title {
   text-align: center;
-  color: #2e7d32;
+  color: #4a0816;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 50px;
@@ -177,8 +177,8 @@
 }
 
 .project-card {
-  background: linear-gradient(160deg, #ffffff, #f1f8ee);
-  border: 1px solid rgba(46,125,50,0.2);
+  background: linear-gradient(160deg, #ffffff, #f8eeee);
+  border: 1px solid #5e1c2a;;
   border-radius: 18px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -190,14 +190,14 @@
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-color: #4caf50;
+  border-color: #5a0417;
 }
 
 .project-card img {
   height: 160px;
   width: 100%;
   object-fit: cover;
-  border-bottom: 1px solid rgba(46,125,50,0.15);
+  border-bottom: 1px solid rgba(68, 12, 18, 0.34);
   transition: transform 0.4s ease;
 }
 
@@ -211,7 +211,7 @@
 }
 
 .card-title {
-  color: #2e7d32;
+  color: #4a0816;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -239,14 +239,14 @@
 
 /* 🌿 CONTACT */
 .contact-section {
-  background: #e9f3e4;
+  background: #bc979724;
   padding: 100px 20px;
   text-align: center;
   animation: fadeInUp 1.5s ease forwards;
 }
 
 .contact-section h2 {
-  color: #2e7d32;
+  color: #4a0816;
   font-weight: 700;
   font-size: 2.3rem;
   margin-bottom: 15px;
@@ -278,32 +278,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.15);
+  box-shadow: 0 5px 15px rgba(101, 26, 26, 0.858);
   transition: all 0.3s ease;
 }
 
 .contact-icons a:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+  box-shadow: 0 10px 25px rgba(119, 20, 20, 0.316);
 }
 
 .contact-icons i {
   font-size: 2rem;
-  color: #2e7d32;
+  color: #4a0816;
   transition: color 0.3s;
 }
 
 .contact-icons a:hover i {
-  color: #4caf50;
+  color: #5f0c1e;
 }
 
 /* 🌿 FOOTER (for continuity) */
 footer {
   text-align: center;
   padding: 25px;
-  color: #2e7d32;
+  color: #4a0816;
   font-size: 0.9rem;
-  border-top: 1px solid rgba(46,125,50,0.1);
+  border-top: 1px solid rgba(85, 20, 24, 0.1);
   background-color: #f4f9f3;
 }
 
@@ -339,7 +339,7 @@ footer {
     <h1>Hi, I'm Mohammed Dilshad </h1>
     <p>
       A passionate <strong>Python Full Stack Developer</strong> building modern web experiences with <br>
-      HTML, CSS, Bootstrap, Django, and MongoDB.
+      HTML, CSS, Bootstrap, Django, and My SQL.
     </p>
     <a href="projects.html" class="btn btn-green">Explore My Work</a>
   </section>
@@ -369,32 +369,23 @@ footer {
     <!-- Python Full Stack -->
     <div class="col-md-3 col-sm-6">
       <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal1">
-        <img src="https://i.imgur.com/y6LpVyr.jpg" alt="Python Certificate" class="img-fluid rounded">
+        <img src="sinet.png" alt="Python Certificate" class="img-fluid rounded">
         <div class="card-body">
-          <h5 class="card-title">Python Full Stack</h5>
-          <p class="card-text">Issued by Udemy — Full Stack Development with Django.</p>
+         <h5 class="card-title">Python Full Stack</h5>
+         <p class="card-text">Issued by SINET Education — Completed Full Stack Python Application Development including Django, MySQL, MongoDB, JavaScript, HTML, CSS, and Bootstrap.</p>
         </div>
       </div>
     </div>
 
-    <!-- Web Development -->
-    <div class="col-md-3 col-sm-6">
-      <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal2">
-        <img src="https://i.imgur.com/HP8xS4t.jpg" alt="Web Development Certificate" class="img-fluid rounded">
-        <div class="card-body">
-          <h5 class="card-title">Web Development</h5>
-          <p class="card-text">Responsive web design & modern UI/UX.</p>
-        </div>
-      </div>
-    </div>
+
 
     <!-- AI & Machine Learning -->
     <div class="col-md-3 col-sm-6">
       <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal3">
-        <img src="https://i.imgur.com/kzKlhlD.jpg" alt="AI Certificate" class="img-fluid rounded">
+        <img src="letsup.png" alt="AI Certificate" class="img-fluid rounded">
         <div class="card-body">
-          <h5 class="card-title">AI & Machine Learning</h5>
-          <p class="card-text">AI fundamentals using Python (Coursera).</p>
+          <h5 class="card-title">HTML & CSS Bootcamp</h5>
+          <p class="card-text">Completed HTML & CSS Bootcamp training focused on modern web design and front-end development fundamentals.</p>
         </div>
       </div>
     </div>
@@ -404,8 +395,8 @@ footer {
       <div class="card project-card" data-bs-toggle="modal" data-bs-target="#certModal4">
         <img src="AI FOR DILSHAD.png" alt="Cybersecurity Certificate" class="img-fluid rounded">
         <div class="card-body">
-          <h5 class="card-title">Cybersecurity Essentials</h5>
-          <p class="card-text">Issued by Cisco Networking Academy.</p>
+          <h5 class="card-title">AI for All – AI Aware</h5>
+          <p class="card-text">Completed the AI for All program by Intel, gaining foundational knowledge of Artificial Intelligence, its core concepts, applications, and societal impact.</p>
         </div>
       </div>
     </div>
@@ -418,27 +409,18 @@ footer {
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content bg-dark">
       <div class="modal-body p-0 text-center">
-        <img src="https://i.imgur.com/y6LpVyr.jpg" alt="Python Certificate" class="img-fluid rounded">
+        <img src="sinet.png" alt="Python Certificate" class="img-fluid rounded">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content bg-dark">
-      <div class="modal-body p-0 text-center">
-        <img src="https://i.imgur.com/HP8xS4t.jpg" alt="Web Development Certificate" class="img-fluid rounded">
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content bg-dark">
       <div class="modal-body p-0 text-center">
-        <img src="https://i.imgur.com/kzKlhlD.jpg" alt="AI Certificate" class="img-fluid rounded">
+        <img src="letsup.png" alt="AI Certificate" class="img-fluid rounded">
       </div>
     </div>
   </div>
@@ -455,7 +437,7 @@ footer {
 </div>
 <br><br>
 
-<!-- 🌿 CONTACT SECTION -->
+<!--  CONTACT SECTION -->
 <section class="contact-section" id="contact">
   <div class="container">
     <h2>Let's Connect </h2>
